@@ -1,0 +1,1 @@
+var color={hexToRgb:function(t){var n=t.replace("#",""),e=parseInt(n.substring(0,2),16),i=parseInt(n.substring(2,4),16),s=parseInt(n.substring(4,6),16);return{r:e,g:i,b:s}},rgbToHex:function(t){var n=t.r.toString(16),e=t.g.toString(16),i=t.b.toString(16);return"#"+(n.length==1?"0"+n:n)+(e.length==1?"0"+e:e)+(i.length==1?"0"+i:i)}};
