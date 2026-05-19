@@ -1,1 +1,19 @@
-var color={hexToRgb:function(e){var t=e.replace("#",""),n=parseInt(t.substring(0,2),16),i=parseInt(t.substring(2,4),16),s=parseInt(t.substring(4,6),16);return{r:n,g:i,b:s}},rgbToHex:function(e){var t=e.r.toString(16),n=e.g.toString(16),i=e.b.toString(16);return"#"+(t.length==1?"0"+t:t)+(n.length==1?"0"+n:n)+(i.length==1?"0"+i:i)}};
+var color = {
+    hexToRgb: function(hex) {
+        var str = hex.replace("#", "");
+        var r = parseInt(str.substring(0, 2), 16);
+        var g = parseInt(str.substring(2, 4), 16);
+        var b = parseInt(str.substring(4, 6), 16);
+        return { r: r, g: g, b: b };
+    },
+
+    rgbToHex: function(rgb) {
+        var r = rgb.r.toString(16);
+        var g = rgb.g.toString(16);
+        var b = rgb.b.toString(16);
+        return "#" +
+            (r.length === 1 ? "0" + r : r) +
+            (g.length === 1 ? "0" + g : g) +
+            (b.length === 1 ? "0" + b : b);
+    }
+};
