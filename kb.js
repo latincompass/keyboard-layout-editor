@@ -585,7 +585,7 @@
 		};
 
 		function updateFromCss(css) {
-			var rules = $cssParser.parse(css);
+			var rules = cssparser.parse(css);
 			$scope.customGlyphs = $renderKey.getGlyphsFromRules(rules); // glyphs first, before rules are modified!
 			$scope.customStyles = $sce.trustAsHtml($renderKey.sanitizeCssRules(rules));
 			if($scope.picker.sentinel === userGlyphsSentinel) {
@@ -1156,7 +1156,7 @@
 			// Load the CSS if necessary
 			if($scope.picker.css && !$scope.picker.glyphs) {
 				$http.get($scope.picker.css).success(function(css) {
-					$scope.picker.glyphs = $renderKey.getGlyphsFromRules($cssParser.parse(css));
+					$scope.picker.glyphs = $renderKey.getGlyphsFromRules(cssparser.parse(css));
 				});
 			}
 		};
