@@ -400,7 +400,6 @@ settings-key(size, adjust = 0) {
     border-width: 1px;
     border-color: black;
     border-radius: 5px;
-    background-color: #cccccc;
     pointer-events: none;
   }
   & .keylabels {

@@ -1263,7 +1263,6 @@ DOT.js Templates
           {{? sanitizedLabel !== "" }}
             {{ var textSize = key.textSize[i] || key.default.textSize; }}
             {{ var textColor = key.textColor[i] || key.default.textColor; }}
-            {{ if(i<9) textColor = lightenColor($color.hex(textColor), 1.2).hex(); }}
             <div class='keylabel keylabel{{=i}} textsize{{=textSize}}' style='color:{{=textColor}}; width:{{=parms.textcapwidth}}px; height:{{=parms.textcapheight}}px;'>
               <div style='width:{{=parms.textcapwidth}}px; max-width:{{=parms.textcapwidth}}px; height:{{=parms.textcapheight}}px;'>{{=sanitizedLabel}}</div>
             </div>
